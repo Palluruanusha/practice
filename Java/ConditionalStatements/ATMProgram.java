@@ -3,7 +3,7 @@ class ATMProgram
 {
 	public static void main(String[] args) 
 	{
-		int a, r2000=1, r500=0, r200=0, r100=0, r50=5;
+		int a, r2000=0, r500=5, r200=2, r100=9, r50=5, count=0;
 		Scanner scn=new Scanner(System.in);
 		System.out.println("Enter Amount");
 		int amt=scn.nextInt();

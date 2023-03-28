@@ -14,7 +14,6 @@ class FibCount
 		int count=0;
 		for(;;) 
 		{
-		c=a+b;
 		if(c>m)
 		{
 			break;
@@ -25,6 +24,7 @@ class FibCount
 		}
 		a=b;
 		b=c;
+		c=a+b;
 	}
 	System.out.println("count is" +count);
 }

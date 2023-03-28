@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class FibSeries 
+class Fibonacci2 
 {
 	public static void main(String[] args) 
 	{
@@ -15,8 +15,7 @@ class FibSeries
 			return;
 		}
 		System.out.print(a+ " " +b);
-		for(int i=3
-			;i<=n;i++)
+		for(int i=0;i<=n;i++)
 		{
 			c=a+b;
 			System.out.print(" " +c);
@@ -25,4 +24,3 @@ class FibSeries
 		}
 	}
 }
-

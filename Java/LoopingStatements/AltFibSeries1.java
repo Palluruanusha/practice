@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class FibSeries 
+class AltFibSeries1 
 {
 	public static void main(String[] args) 
 	{
@@ -14,15 +14,16 @@ class FibSeries
 			System.out.print(a);
 			return;
 		}
-		System.out.print(a+ " " +b);
-		for(int i=3
-			;i<=n;i++)
+		System.out.print(a);
+		for(int i=3;i<=n*2;i++)
 		{
 			c=a+b;
-			System.out.print(" " +c);
+			if(i%2!=0)
+			{
+				System.out.print(c);
 			a=b;
 			b=c;
+			}
 		}
 	}
 }
-

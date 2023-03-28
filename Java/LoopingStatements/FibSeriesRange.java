@@ -10,23 +10,21 @@ class FibSeriesRange
 		int a=0;
 		int b=1;
 		int c=0;
-		if(n==0)
+		int count=0;
+		for(;;) 
 		{
-			System.out.print(a+ " " +b);
-		}
-		for(;;)
+		c=a+b;
+		if(c>m)
 		{
-			c=a+b;
-			if(c>m)
-			{
-				break;
-			}
-			if(c>=n)
-			{
-				System.out.print(" " +c);
-			}
-			a=b;
-			b=c;
+			break;
 		}
+		if(c>=n)
+		{
+			count++;
+		}
+		a=b;
+		b=c;
 	}
+	System.out.println("count is" +count);
+}
 }
