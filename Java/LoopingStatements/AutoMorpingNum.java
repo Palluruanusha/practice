@@ -3,9 +3,9 @@ class AutoMorpingNum
 {
 	public static void main(String[] args) 
 	{
-		Scanner scn=new Scanner(System.in);
+		//Scanner scn=new Scanner(System.in);
 		System.out.println("Enter number");
-		int num=scn.nextInt();
+		//int num=scn.nextInt();
 		int n=num;
 		int d=1;
 		while(n>0)
