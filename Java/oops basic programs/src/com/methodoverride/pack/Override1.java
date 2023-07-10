@@ -29,7 +29,6 @@ class CameraPhone extends Phone
 		super(name,color,price,ram);
 		this.pixel=pixel;
 	}
-	@Override
 	public void display()
 	{
 		super.display();
