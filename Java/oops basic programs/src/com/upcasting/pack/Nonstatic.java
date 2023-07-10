@@ -8,7 +8,6 @@ class A
 }
 class B extends A
 {
-	@override
 	public void m1()
 	{
 		System.out.println("M1 of B");
@@ -16,7 +15,6 @@ class B extends A
 }
 class C extends B
 {
-	@override
 	public void m1()
 	{
 		System.out.println("M1 of C");
@@ -33,5 +31,4 @@ public class Nonstatic {
 		a.m1();
 
 	}
-
 }
