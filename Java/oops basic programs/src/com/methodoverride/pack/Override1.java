@@ -14,10 +14,10 @@ class Phone
 	}
 	public void display()
 	{
-		System.out.println("Name:+name");
-		System.out.println("Color:+color");
-		System.out.println("Price:+price");
-		System.out.println("Ram:+ram");
+		System.out.println("Name:"+name);
+		System.out.println("Color:"+color);
+		System.out.println("Price:"+price);
+		System.out.println("Ram:"+ram);
 
 	}
 }
@@ -40,7 +40,7 @@ public class Override1 {
 	{
 		Phone p=new Phone("motorala","silver",23000,8);
 		p.display();
-		System.out.println("------------------------");
+		System.out.println();
 		CameraPhone cp=new CameraPhone("Samsung","grey",32000,16,40);
 		cp.display();
 	}
