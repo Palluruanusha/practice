@@ -7,21 +7,23 @@ class ArmNumRange
 		System.out.println("Enter lower and upper limit");
 		int l=scn.nextInt();
 		int u=scn.nextInt();
-		for(int i=153;i<=200;i++)
+		for(int i=l;i<=u;i++)
 		{
-		int n=153;
+		int num=0;
 		int count=0;
-		while(n>0)
+		while(num>0)
 		{
 			count++;
-			n/=10;
+			num/=10;
 		}
 		}
 		int sum=0;
-		n=i;
+		int i=1;
+		int n=i;
 		while(n>0)
 		{
 			int prod=1;
+			int count=0; 
 		for(int j=1;j<=count;j++)
 		{
 			int d=n%10;
@@ -30,10 +32,10 @@ class ArmNumRange
 		sum+=prod;
 		n/=10;
 		}
-		if(sum==num)
+		if(sum==n)
 			System.out.println("Armstrong number");
-		else
-			System.out.println("Not a armstrong number");
+		//else
+			//System.out.println("Not a armstrong number");
 		}
 }
 
