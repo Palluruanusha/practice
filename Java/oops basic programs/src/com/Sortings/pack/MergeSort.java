@@ -6,51 +6,36 @@ import java.util.Scanner;
 public class MergeSort {
 
 	public static void main(String[] args) {
-		Scanner scn=new Scanner(System.in);
-		System.out.println("enter how man  elements to sort");
-		int n=scn.nextInt();
-		
-		int[] a=new int[n];
-		
-		System.out.println("enter elements");
-		for(int i=0;i<n;i++) {
-			a[i]=scn.nextInt();
+		int [] a= {15,8,2,7,3,6,5};
+		System.out.println(Arrays.toString(a));
+		sort(a);
+		System.out.println(Arrays.toString(a));
+
+	} 
+	public static void sort(int []a) {
+		if(a.length==1)return;
+		int[]left=new int[a.length/2];
+		int[]right=new int[a.length-left.length];
+		for(int i=0;i<left.length;i++) {
+		left[i]=a[i];
+			}
+		for(int j=0;j<right.length;j++) {
+			right[j]=a[j+left.length];
 		}
-		mSort(a,0,a.length-1);
+		sort(left);
+		sort(right);
+		merge(left,right,a);
 	}
-	
-	private static void mSort(int[] a, int i, int j) {
-		if(i<j) {
-			int mid =(i+j)/2;
-			mSort(a,i,mid);
-			mSort(a,mid+1,j);
-			mSort(a,i,mid);
-		}
-	}
-	public static void Sort(int []a,int lb,int mid,int ub) {
-		int i=ub;
-		int j=mid+1;
-		int k=lb;
-		int []b= new int [a.length];
-		while(i<=mid && j<=ub) {
-			if(a[i]<=a[j])
+		private static void merge(int[]a,int[]b,int[]c) {
+			int i=0, j=0, k=0;
+			while(i<a.length && j<b.length)
 			{
-				b[k++]=a[i++];
-			}
-			else {
-				b[k++]=a[j++];
+				if (a[i] < b[j])
+					c[k++]=a[i++];
+				else
+					c[k++]=b[j++];
 		}
-		if(i>mid) {
-			b[k++]=a[j++];
+			while(i<a.length) c[k++]=a[i++];
+			while(j<b.length) c[k++]=b[i++];
 		}
-			else {
-				while(j<=mid) {
-					b[k++]=a[i++];
-				}
-			}
-			for(i=lb;i<=ub;i++) {
-				a[i++]=b[i++];
-			}
 		}
-}
-}
