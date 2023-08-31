@@ -6,12 +6,12 @@ public class Basic {
 		m2();
 		System.out.println("ok bye");
 		}
-		public static void m2(String[] args) {
+		public static void m2() {
 			System.out.println("hey");
 			m3(); 
 			System.out.println("its ok");
 		}
-			public static void m3(String[] args) {
+			public static void m3() {
 				System.out.println("alteady comitted");
 		}
 }
